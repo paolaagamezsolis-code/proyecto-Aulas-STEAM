@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo Aula STEAM Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- MENÚ DE NAVEGACIÓN -->
+<header>
+  <nav class="navbar">
+    <h1 class="logo">Aulas STEAM</h1>
+    <ul class="menu">
+      <li><a href="#que-es-steam">Qué es STEAM</a></li>
+      <li><a href="#beneficios-steam">Beneficios</a></li>
+      <li><a href="#capacitacion-docente">Capacitación Docente</a></li>
+      <li><a href="#guias">Guías</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- ================= GALERÍA DE EQUIPOS STEAM ================= -->
+<section id="galeria">
+  <h2>Galería de Equipos STEAM</h2>
+
+  <div class="galeria-grid">
+
+    <div class="item" onclick="abrirDescripcion('aula-completa')">
+      <img src="imagenes/aulacompleta.jpg" alt="Aula Completa STEAM">
+      <p>Aula Completa STEAM</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('brazo-robotico')">
+      <img src="imagenes/brazorobotico.jpg" alt="Brazo Robótico">
+      <p>Brazo Robótico</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('camara-documental')">
+      <img src="imagenes/camaradocumenta.jpg" alt="Cámara Documental">
+      <p>Cámara Documental</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('impresora-3d')">
+      <img src="imagenes/impresora3d.jpg" alt="Impresora 3D">
+      <p>Impresora 3D</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('kit-iot')">
+      <img src="imagenes/kitsiot.jpg" alt="Kit IoT">
+      <p>Kit IoT</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('kit-steam')">
+      <img src="imagenes/kitSteam.jpg" alt="Kit STEAM">
+      <p>Kit STEAM</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('lapiz-interactivo')">
+      <img src="imagenes/lapizinteractivos.jpg" alt="Lápices Interactivos">
+      <p>Lápices Interactivos</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('laptops-estudiantes')">
+      <img src="imagenes/laptos.jpg" alt="Laptops de Estudiantes">
+      <p>Laptops de Estudiantes</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('libros-interactivos')">
+      <img src="imagenes/librosinteractivos.jpg" alt="Libros Interactivos">
+      <p>Libros Interactivos</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('maleta-carga')">
+      <img src="imagenes/maletadecarga.jpg" alt="Maleta de Carga">
+      <p>Maleta de Carga</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('mesa-docente')">
+      <img src="imagenes/mesadocente.jpg" alt="Mesa Docente">
+      <p>Mesa Docente</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('microscopio')">
+      <img src="imagenes/microscopio.jpg" alt="Microscopio Digital">
+      <p>Microscopio</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('tablero-interactivo')">
+      <img src="imagenes/tablerointeractivo.jpg" alt="Tablero Interactivo">
+      <p>Tablero Interactivo</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('tum-lap')">
+      <img src="imagenes/tumlap.jpg" alt="Tum Lap">
+      <p>Tum Lap</p>
+    </div>
+
+    <div class="item" onclick="abrirDescripcion('video-proyector')">
+      <img src="imagenes/videoproyector.jpg" alt="Video Proyector">
+      <p>Video Proyector</p>
+    </div>
+
+  </div>
+</section>
+
+   
+
+  </div>
+</section>
+
+
+    <header>
+        <h1>Prototipo Aula STEAM Interactiva</h1>
+        <p>Explora cada elemento del aula para conocer su función</p>
+    </header>
+
+    <div class="aula">
+        <img src="aula_fondo.jpg" alt="Aula STEAM" class="fondo">
+        <div class="elemento" id="laptop" style="top:60%; left:30%;">💻</div>
+        <div class="elemento" id="microscopio" style="top:55%; left:50%;">🔬</div>
+        <div class="elemento" id="impresora3d" style="top:65%; left:70%;">🖨️</div>
+        <div class="elemento" id="brazo" style="top:45%; left:40%;">🤖</div>
+    </div>
+
+    <div id="infoBox" class="infoBox">
+        <h2 id="titulo"></h2>
+        <p id="descripcion"></p>
+        <button onclick="cerrarInfo()">Cerrar</button>
+    </div>
+
+    <footer>
+        <p>Desarrollado por Paola Andrea Agámez Solís - Proyecto de Ingeniería I</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<!-- SECCIÓN: ¿Qué es STEAM? -->
+<section id="que-es-steam">
+  <h2>¿Qué es STEAM?</h2>
+  <p>
+    El enfoque <strong>STEAM</strong> (Ciencia, Tecnología, Ingeniería, Arte y Matemáticas)
+    busca desarrollar en los estudiantes habilidades para la resolución de problemas,
+    la creatividad, el pensamiento crítico y el trabajo en equipo.
+    En las Aulas STEAM, los estudiantes aprenden mediante la práctica y la experimentación,
+    aplicando los conocimientos de distintas áreas para crear soluciones reales.
+  </p>
+</section>
+
+<!-- SECCIÓN: Beneficios de las Aulas STEAM -->
+<section id="beneficios-steam">
+  <h2>Beneficios de las Aulas STEAM</h2>
+  <ul>
+    <li>💡 Fomenta la creatividad y la innovación en los estudiantes.</li>
+    <li>🤝 Promueve el trabajo colaborativo y la comunicación efectiva.</li>
+    <li>🧠 Desarrolla el pensamiento lógico, crítico y analítico.</li>
+    <li>💻 Fortalece la alfabetización digital y el uso de la tecnología.</li>
+    <li>🎯 Conecta el aprendizaje con la vida real mediante proyectos prácticos.</li>
+    <li>🌍 Prepara a los estudiantes para los retos de la sociedad digital.</li>
+  </ul>
+</section>
+
+<!-- SECCIÓN: Importancia de la capacitación docente -->
+<section id="capacitacion-docente">
+  <h2>La importancia de la capacitación docente</h2>
+  <p>
+    Para que las Aulas STEAM sean exitosas, no basta con tener los recursos tecnológicos;
+    los docentes necesitan formación continua en competencias digitales y metodologías activas.
+    Una capacitación adecuada permite que los maestros aprovechen al máximo herramientas como
+    el <strong>tablero interactivo</strong>, los <strong>kits IoT</strong>,
+    la <strong>impresora 3D</strong> y los <strong>recursos del aula LMS</strong>.
+  </p>
+  <p>
+    De esta forma, los docentes se convierten en guías del aprendizaje, motivando a los estudiantes
+    a investigar, experimentar y desarrollar proyectos que integren la ciencia y la tecnología con la creatividad.
+  </p>
+</section>
+
+
+
+    <section id="guias">
+  <h2>Guías STEAM por Grado</h2>
+  <p class="intro">Explora las guías diseñadas para cada nivel educativo y descubre cómo los recursos del Aula STEAM potencian el aprendizaje.</p>
+
+  <div class="contenedor-guias">
+
+    <div class="guia">
+      <h3>Grado 2° – Introducción a las redes</h3>
+      <p>Los estudiantes comprenden el concepto de red y sus aplicaciones en distintos contextos, utilizando recursos como el <strong>tablero interactivo</strong> y el <strong>kit i3Cart</strong>.</p>
+      <button onclick="verGuia('grado2')">Ver más</button>
+    </div>
+
+    <div class="guia">
+      <h3>Grado 3° – Algoritmos en la vida cotidiana</h3>
+      <p>Se introduce el concepto de <strong>algoritmo</strong> mediante actividades cotidianas para desarrollar pensamiento lógico y computacional.</p>
+      <button onclick="verGuia('grado3')">Ver más</button>
+    </div>
+
+    <div class="guia">
+      <h3>Grado 6° – Solución de problemas tecnológicos</h3>
+      <p>Los estudiantes aplican procesos de diseño y pensamiento computacional para resolver problemas reales con herramientas del Aula STEAM.</p>
+      <button onclick="verGuia('grado6')">Ver más</button>
+    </div>
+
+    <div class="guia">
+      <h3>Grado 7° – Evolución de la tecnología</h3>
+      <p>Se explora la historia de la tecnología y su impacto social, empleando recursos como el <strong>tablero interactivo</strong> y el <strong>i3Conference</strong>.</p>
+      <button onclick="verGuia('grado7')">Ver más</button>
+    </div>
+
+    <div class="guia">
+      <h3>Grado 8° – Sensores y transductores</h3>
+      <p>Los estudiantes comprenden cómo los <strong>sensores</strong> captan información del entorno para desarrollar proyectos con <strong>kits IoT</strong> y <strong>LittleBits</strong>.</p>
+      <button onclick="verGuia('grado8')">Ver más</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- Ventana emergente -->
+<!-- Ventana emergente -->
+<div id="popup-guia" class="popup">
+  <div class="popup-contenido">
+    <span class="cerrar" onclick="cerrarGuia()">&times;</span>
+    <h3 id="titulo-guia"></h3>
+    
+    <h4>🎯 Objetivo</h4>
+    <p id="objetivo"></p>
+
+    <h4>🧠 Recursos del Aula STEAM</h4>
+    <p id="recursos"></p>
+
+    <h4>⚙️ Actividades</h4>
+    <p id="actividades"></p>
+
+    <h4>✅ Evaluación</h4>
+    <p id="evaluacion"></p>
+  </div>
+</div>
+
+</div>
+<!-- SECCIÓN: CONTACTO -->
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>Proyecto desarrollado por <strong>Paola Andrea Agámez Solís</strong>.</p>
+  <p>Correo: <a href="mailto:paolaagamezsolis@gmail.com">paolaagamezsolis@gmail.com</a></p>
+  <p>Este prototipo fue creado como parte del proyecto <strong>Aulas STEAM</strong> para fortalecer el aprendizaje y la innovación en las instituciones educativas.</p>
+</section>
+
+
+<div id="modalDescripcion" class="modal">
+  <div class="modal-content">
+    <span class="cerrar" onclick="cerrarDescripcion()">&times;</span>
+    <h3 id="tituloEquipo"></h3>
+    <p id="textoDescripcion"></p>
+  </div>
+</div>
+
+<div class="videos-section">
+    <h2>Videos recomendados</h2>
+
+    <a href="https://www.youtube.com/watch?v=5b2hO5PSCrY" target="_blank" class="video-link">
+        Introducción STEAM
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=jk5SroCfrnU" target="_blank" class="video-link">
+        Impresión 3D en Educación
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=QW-IkoCwUSI" target="_blank" class="video-link">
+        Robótica Educativa
+    </a>
+</div>
+
+
+
+</body>
+</html>
